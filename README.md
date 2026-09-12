@@ -2,6 +2,10 @@
 
 An offline Android customer payments database with customer contacts, invoices, payment history, late charges, printable PDF statements and WhatsApp sharing.
 
+## Continue in Codex on another PC
+
+Read [Work from any PC](WORK-FROM-ANY-PC.md). This repository includes AGENTS.md so Codex can pick up the project context, plus a portable Node.js build runner. Calculation tests need no Android SDK or signing key: `node build.mjs --test`.
+
 ## Install
 
 [Download Collection Desk 1.0 APK](Collection-Desk.apk?raw=true). Requires Android 8.0 or newer. Open the APK on your phone, then set your business name and currency in Settings before creating invoices.
@@ -24,7 +28,7 @@ Read the [user guide](USER-GUIDE.md) for payments, reporting and backups.
 
 The app uses Java and native Android APIs without third-party runtime libraries. Minimum SDK is 26; target SDK is 34.
 
-Install a JDK and Android SDK platform 34 with Build Tools 36.0.0. In `build.ps1`, set the SDK and JDK paths for your computer, set the local COLLECTION_DESK_KEYSTORE_PASSWORD environment variable to your private signing password, then run:
+Recommended on any OS: use `node build.mjs` (see [portable setup](WORK-FROM-ANY-PC.md)). The older Windows-only build script is also retained below. Install a JDK and Android SDK platform 34 with Build Tools 36.0.0. In `build.ps1`, set the SDK and JDK paths for your computer, set the local COLLECTION_DESK_KEYSTORE_PASSWORD environment variable to your private signing password, then run:
 
 ```powershell
 ./build.ps1
@@ -45,5 +49,6 @@ The APK was built and its v2/v3 signature verified. All 19 calculation checks pa
 One device and currency; no cloud synchronization or app account. Security relies on Android app storage and the phone's lock. Backups are not encrypted by the app. Saved invoices cannot be edited or deleted. Activity recreation does not preserve unsaved forms. Database upgrades require a preserving migration before a future schema change.
 
 Reports exclude emergency contacts and private customer notes. Sharing opens the selected app; the user chooses the recipient and confirms sending.
+
 
 
