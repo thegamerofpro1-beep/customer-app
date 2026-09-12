@@ -1,0 +1,23 @@
+# Generated builds and local settings
+/build/
+/.idea/
+/.gradle/
+local.properties
+.env
+.env.*
+*.class
+*.dex
+*.log
+# Signing credentials and private customer data
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*Signing-Key*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+collection-desk-*.json
+backups/
