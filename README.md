@@ -4,9 +4,9 @@ An offline Android customer payments database with customer contacts, invoices, 
 
 ## Install
 
-[Download Collection Desk 1.0 APK](downloads/Collection-Desk.apk?raw=true). Requires Android 8.0 or newer. Open the APK on your phone, then set your business name and currency in Settings before creating invoices.
+[Download Collection Desk 1.0 APK](Collection-Desk.apk?raw=true). Requires Android 8.0 or newer. Open the APK on your phone, then set your business name and currency in Settings before creating invoices.
 
-Read the [user guide](docs/USER-GUIDE.md) for payments, reporting and backups.
+Read the [user guide](USER-GUIDE.md) for payments, reporting and backups.
 
 ## Features
 
@@ -45,4 +45,5 @@ The APK was built and its v2/v3 signature verified. All 19 calculation checks pa
 One device and currency; no cloud synchronization or app account. Security relies on Android app storage and the phone's lock. Backups are not encrypted by the app. Saved invoices cannot be edited or deleted. Activity recreation does not preserve unsaved forms. Database upgrades require a preserving migration before a future schema change.
 
 Reports exclude emergency contacts and private customer notes. Sharing opens the selected app; the user chooses the recipient and confirms sending.
+
 
